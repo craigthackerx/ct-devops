@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  portainer:
+    image: craigtho/portainer:latest
+    container_name: craig-portainer
+    restart: always
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - "9443:9000"
+      - "11000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - portainer_data:/data
+    command:
+        --ssl
+        --sslcert /certs/portainer.crt
+        --sslkey /certs/portainer.key
+    volumes:
+      - type: bind
+        source: ./local-certs
+        target: /certs
+volumes:
+  portainer_data:
+
+#Currently broken.
