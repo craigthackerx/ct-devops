@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
   config.vm.box = "generic/ubuntu1804"
-  config.vm.hostname = "cthacker-vm"
+  config.vm.hostname = "tim-vm"
   
-  config.vm.provider "vmware-workstation" do |v|
+  config.vm.provider "virtualbox" do |v|
    v.gui = true
    v.memory = "4096"
  end
@@ -12,14 +12,14 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "~/vagrant-stuff", "/vagrant_stuff"
 
   config.vm.provision "shell", inline: <<-SHELL
-
+      
       #Add Timezone
       ln -snf /usr/share/zoneinfo/Europe/London /etc/localtime && echo Europe/London > /etc/timezone
-
+      
       #Add User for myself
-      useradd -m -s /bin/bash cthacker
-      usermod -aG sudo cthacker
-      echo cthacker:Sp00kyP4SS! | chpasswd
+      useradd -m -s /bin/bash tim
+      usermod -aG sudo tim
+      echo tim:Sp00kyP4SS! | chpasswd
       
       #Install packages
       export DEBIAN_FRONTEND=noninteractive && \
@@ -59,14 +59,14 @@ Vagrant.configure("2") do |config|
       xfce \
       xinit \
       unzip \
-      zip
+      zip 
       
       #Clean up installs
       apt-get autoremove && apt-get autoclean && apt-get clean
 
       #Set System Locale
       locale-gen en_GB.UTF-8 && update-locale LANG=en_GB.UTF-8
-
+      
       #Set Environment Variables
       echo 'export NODE_OPTIONS=--max_old_space_size=4096' >> /home/tim/.bashrc 
       echo 'export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"' >> /home/tim/.bashrc 
@@ -83,6 +83,9 @@ Vagrant.configure("2") do |config|
       apt-get update
       apt-get install codium
 
+      #Install IntelliJ
+      sudo snap install intellij-idea-community --classic
+
       #Install Docker
       curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
       sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -91,17 +94,20 @@ Vagrant.configure("2") do |config|
       curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
       systemctl enable docker
       systemctl restart docker
-      usermod -aG docker cthacker
+      usermod -aG docker tim
 
       #Install acme.sh
       curl https://get.acme.sh | bash
       
       #Install NVM
       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+      nvm install node 10.16.0
+      nvm use 10.16.0
 
       #Install SDKMAN!
       curl -s "https://get.sdkman.io" | bash
       source "$HOME/.sdkman/bin/sdkman-init.sh"
+      sdk install gradle 4.8.1
 
       startx
    SHELL
