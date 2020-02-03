@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p 'Please enter your domain name: ' DOMAIN_NAME
 cd $HOME/.acme.sh/ && \
-mv '*.craigthacker.org' wildcard.${DOMAIN_NAME} && \
+mv *.${DOMAIN_NAME} wildcard.${DOMAIN_NAME} && \
 cd wildcard.${DOMAIN_NAME} && \
 mv '*.${DOMAIN_NAME}.cer' wildcard.${DOMAIN_NAME}.cer && \
 mv '*.${DOMAIN_NAME}.conf' wildcard.${DOMAIN_NAME}.conf && \
