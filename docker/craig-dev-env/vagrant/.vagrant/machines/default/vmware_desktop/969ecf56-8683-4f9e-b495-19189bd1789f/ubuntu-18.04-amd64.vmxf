@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<VMId type="string">52 6e c2 92 50 35 f4 57-2a 35 cc 60 24 54 9d 01</VMId>
+<vmxPathName type="string">ubuntu-18.04-amd64.vmx</vmxPathName></VM></Foundry>

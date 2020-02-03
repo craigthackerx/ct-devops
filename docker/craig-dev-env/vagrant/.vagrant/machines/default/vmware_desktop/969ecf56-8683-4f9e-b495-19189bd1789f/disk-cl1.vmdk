@@ -1,0 +1,30 @@
+# Disk DescriptorFile
+version=1
+encoding="UTF-8"
+CID=be58f67f
+parentCID=be58f67f
+createType="twoGbMaxExtentSparse"
+parentFileNameHint="/home/cthacker/.vagrant.d/boxes/bento-VAGRANTSLASH-ubuntu-18.04/201912.04.0/vmware_desktop/disk.vmdk"
+# Extent description
+RW 8323072 SPARSE "disk-cl1-s001.vmdk"
+RW 8323072 SPARSE "disk-cl1-s002.vmdk"
+RW 8323072 SPARSE "disk-cl1-s003.vmdk"
+RW 8323072 SPARSE "disk-cl1-s004.vmdk"
+RW 8323072 SPARSE "disk-cl1-s005.vmdk"
+RW 8323072 SPARSE "disk-cl1-s006.vmdk"
+RW 8323072 SPARSE "disk-cl1-s007.vmdk"
+RW 8323072 SPARSE "disk-cl1-s008.vmdk"
+RW 8323072 SPARSE "disk-cl1-s009.vmdk"
+RW 8323072 SPARSE "disk-cl1-s010.vmdk"
+RW 8323072 SPARSE "disk-cl1-s011.vmdk"
+RW 8323072 SPARSE "disk-cl1-s012.vmdk"
+RW 8323072 SPARSE "disk-cl1-s013.vmdk"
+RW 8323072 SPARSE "disk-cl1-s014.vmdk"
+RW 8323072 SPARSE "disk-cl1-s015.vmdk"
+RW 8323072 SPARSE "disk-cl1-s016.vmdk"
+RW 1048576 SPARSE "disk-cl1-s017.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.fcd.uuid = "00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00"

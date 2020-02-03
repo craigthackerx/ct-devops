@@ -1,0 +1,438 @@
+2020-02-03T18:44:30.345Z| vmx| I125: Log for vmrun pid=12660 version=1.17.0 build=build-15018445 option=Release
+2020-02-03T18:44:30.345Z| vmx| I125: The process is 64-bit.
+2020-02-03T18:44:30.345Z| vmx| I125: Host codepage=UTF-8 encoding=UTF-8
+2020-02-03T18:44:30.345Z| vmx| I125: Host is Linux 5.3.0-29-generic Ubuntu 19.10
+2020-02-03T18:44:30.323Z| vmx| I125: VTHREAD 140180148911040 "vmx" tid 12660
+2020-02-03T18:44:30.323Z| vmx| I125: DictionaryLoad: Cannot open file "/etc/vmware/vsphereFeatures/techPreview.cfg": No such file or directory.
+2020-02-03T18:44:30.323Z| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "/etc/vmware/vsphereFeatures/techPreview.cfg": No such file or directory.
+2020-02-03T18:44:30.323Z| vmx| I125: FeatureStateLib: Error while loading tech preview config file: /etc/vmware/vsphereFeatures/techPreview.cfg, using default (disabled) for all Tech Preview features.
+2020-02-03T18:44:30.323Z| vmx| I125: LOCALE en_GB.UTF-8 -> NULL
+2020-02-03T18:44:30.323Z| vmx| I125: Msg_SetLocaleEx: HostLocale=UTF-8 UserLocale=NULL
+2020-02-03T18:44:30.324Z| vmx| I125: DictionaryLoad: Cannot open file "/usr/lib/vmware/settings": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: Msg_Reset:
+2020-02-03T18:44:30.324Z| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "/usr/lib/vmware/settings": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: ----------------------------------------
+2020-02-03T18:44:30.324Z| vmx| I125: ConfigDB: Failed to load /usr/lib/vmware/settings
+2020-02-03T18:44:30.324Z| vmx| I125: DictionaryLoad: Cannot open file "/home/cthacker/.vmware/config": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: Msg_Reset:
+2020-02-03T18:44:30.324Z| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "/home/cthacker/.vmware/config": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: ----------------------------------------
+2020-02-03T18:44:30.324Z| vmx| I125: ConfigDB: Failed to load ~/.vmware/config
+2020-02-03T18:44:30.324Z| vmx| I125: OBJLIB-LIB: Objlib initialized.
+2020-02-03T18:44:30.324Z| vmx| I125: DictionaryLoad: Cannot open file "/usr/lib/vmware/settings": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "/usr/lib/vmware/settings": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: PREF Optional preferences file not found at /usr/lib/vmware/settings. Using default values.
+2020-02-03T18:44:30.324Z| vmx| I125: DictionaryLoad: Cannot open file "/home/cthacker/.vmware/config": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "/home/cthacker/.vmware/config": No such file or directory.
+2020-02-03T18:44:30.324Z| vmx| I125: PREF Optional preferences file not found at /home/cthacker/.vmware/config. Using default values.
+2020-02-03T18:44:30.324Z| vmx| I125: Fail to realpath: /usr/lib/vmware/lib/libcrypto.so.1.0.2-x86-64/libcrypto.so.1.0.2, errno=2
+2020-02-03T18:44:30.324Z| vmx| I125: Denied library: /usr/lib/vmware/lib/libcrypto.so.1.0.2-x86-64/libcrypto.so.1.0.2
+2020-02-03T18:44:30.338Z| vmx| I125: lib/ssl: OpenSSL using FIPS_drbg for RAND
+2020-02-03T18:44:30.338Z| vmx| I125: lib/ssl: protocol list tls1.2
+2020-02-03T18:44:30.338Z| vmx| I125: lib/ssl: protocol list tls1.2 (openssl flags 0x17000000)
+2020-02-03T18:44:30.338Z| vmx| I125: lib/ssl: cipher list ECDHE+AESGCM:RSA+AESGCM:ECDHE+AES:RSA+AES
+2020-02-03T18:44:30.338Z| vmx| I125: lib/ssl: curves list prime256v1:secp384r1:secp521r1
+2020-02-03T18:44:30.491Z| vmx| I125: Hostname=craig-laptop
+2020-02-03T18:44:30.491Z| vmx| I125: IP=127.0.0.1 (lo)
+2020-02-03T18:44:30.491Z| vmx| I125: IP=10.0.1.4 (wlp2s0)
+2020-02-03T18:44:30.491Z| vmx| I125: IP=192.168.122.1 (virbr0)
+2020-02-03T18:44:30.491Z| vmx| I125: IP=172.17.0.1 (docker0)
+2020-02-03T18:44:30.491Z| vmx| I125: IP=192.168.20.1 (vmnet1)
+2020-02-03T18:44:30.491Z| vmx| I125: IP=172.16.188.1 (vmnet8)
+2020-02-03T18:44:30.491Z| vmx| I125: System uptime 3593990000 us
+2020-02-03T18:44:30.491Z| vmx| I125: Command line: "/usr/lib/vmware/bin/vmware-vmx" "-s" "vmx.noUIBuildNumberCheck=TRUE" "-#" "product=1;name=vmrun;version=1.17.0;buildnumber=15018445;licensename=VMware Workstation;licenseversion=15.0+;" "-@" "duplex=3;msgs=ui" "/home/cthacker/Desktop/ct-devops/docker/craig-dev-env/vagrant/.vagrant/machines/default/vmware_desktop/969ecf56-8683-4f9e-b495-19189bd1789f/ubuntu-18.04-amd64.vmx"
+2020-02-03T18:44:30.491Z| vmx| I125: Msg_SetLocaleEx: HostLocale=UTF-8 UserLocale=NULL
+2020-02-03T18:44:30.491Z| vmx| I125: Duplex socket: 3
+2020-02-03T18:44:30.516Z| vmx| I125: WQPoolAllocPoll : pollIx = 1, signalHandle = 9
+2020-02-03T18:44:30.516Z| vmx| I125: WQPoolAllocPoll : pollIx = 2, signalHandle = 11
+2020-02-03T18:44:30.516Z| vmx| I125: VigorTransport listening on fd 12
+2020-02-03T18:44:30.516Z| vmx| I125: Vigor_Init 1
+2020-02-03T18:44:30.516Z| vmx| I125: Connecting 'ui' to fd '3' with user '(null)'
+2020-02-03T18:44:30.516Z| vmx| I125: VmdbAddConnection: cnxPath=/db/connection/#1/, cnxIx=1
+2020-02-03T18:44:30.545Z| vmx| I125: /home/cthacker/Desktop/ct-devops/docker/craig-dev-env/vagrant/.vagrant/machines/default/vmware_desktop/969ecf56-8683-4f9e-b495-19189bd1789f/ubuntu-18.04-amd64.vmx: Setup symlink /var/run/vmware/5466045db20c4dd54badcf41c738e7fa -> /var/run/vmware/1000/3593990000_12660
+2020-02-03T18:44:30.545Z| vmx| I125: Vix: [mainDispatch.c:486]: VMAutomation: Initializing VMAutomation.
+2020-02-03T18:44:30.545Z| vmx| I125: Vix: [mainDispatch.c:738]: VMAutomationOpenListenerSocket() listening
+2020-02-03T18:44:30.549Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=0, newAppState=1870, success=1 additionalError=0
+2020-02-03T18:44:30.549Z| vmx| I125: Transitioned vmx/execState/val to poweredOff
+2020-02-03T18:44:30.549Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=1, newAppState=1873, success=1 additionalError=0
+2020-02-03T18:44:30.549Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=2, newAppState=1877, success=1 additionalError=0
+2020-02-03T18:44:30.549Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=3, newAppState=1881, success=1 additionalError=0
+2020-02-03T18:44:30.549Z| vmx| I125: FeatureCompat: No EVC masks.
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID vendor: GenuineIntel
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID family: 0x6 model: 0x4e stepping: 0x3
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID codename: Skylake-Y
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID name: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000000, 0: 0x00000016 0x756e6547 0x6c65746e 0x49656e69
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000001, 0: 0x000406e3 0x02100800 0x7ffafbbf 0xbfebfbff
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000002, 0: 0x76036301 0x00f0b5ff 0x00000000 0x00c30000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000003, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000004, 0: 0x1c004121 0x01c0003f 0x0000003f 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000004, 1: 0x1c004122 0x01c0003f 0x0000003f 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000004, 2: 0x1c004143 0x00c0003f 0x000003ff 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000004, 3: 0x1c03c163 0x02c0003f 0x00000fff 0x00000006
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000004, 4: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000005, 0: 0x00000040 0x00000040 0x00000003 0x11142120
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000006, 0: 0x000027f5 0x00000002 0x00000009 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000007, 0: 0x00000000 0x029c67af 0x00000000 0x9c002400
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000008, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000009, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000a, 0: 0x07300404 0x00000000 0x00000000 0x00000603
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000b, 0: 0x00000001 0x00000002 0x00000100 0x00000002
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000b, 1: 0x00000004 0x00000004 0x00000201 0x00000002
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000b, 2: 0x00000000 0x00000000 0x00000002 0x00000002
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000c, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 0: 0x0000001f 0x00000440 0x00000440 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 1: 0x0000000f 0x000003c0 0x00000100 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 2: 0x00000100 0x00000240 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 3: 0x00000040 0x000003c0 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 4: 0x00000040 0x00000400 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 5: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 6: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 7: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000d, 8: 0x00000080 0x00000000 0x00000001 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000e, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000f, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 0000000f, 1: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000010, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000010, 1: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000010, 2: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000010, 3: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000011, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000012, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000012, 1: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000012, 2: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000012, 3: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000013, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000014, 0: 0x00000001 0x0000000f 0x00000007 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000014, 1: 0x02490002 0x003f3fff 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000015, 0: 0x00000002 0x000000a6 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 00000016, 0: 0x000007d0 0x000007d0 0x00000064 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000000, 0: 0x80000008 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000001, 0: 0x00000000 0x00000000 0x00000121 0x2c100800
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000002, 0: 0x65746e49 0x2952286c 0x726f4320 0x4d542865
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000003, 0: 0x33692029 0x3030362d 0x43205536 0x40205550
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000004, 0: 0x302e3220 0x7a484730 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000005, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000006, 0: 0x00000000 0x00000000 0x01006040 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000007, 0: 0x00000000 0x00000000 0x00000000 0x00000100
+2020-02-03T18:44:30.550Z| vmx| I125: hostCPUID level 80000008, 0: 0x00003027 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.550Z| vmx| I125: CPUID differences from hostCPUID.
+2020-02-03T18:44:30.550Z| vmx| I125: Physical APIC IDs: 1,0,2-3
+2020-02-03T18:44:30.550Z| vmx| I125: Physical X2APIC IDs: 0-3
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR       0x3a =                0x5
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x480 =   0xda040000000004
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x481 =       0x7f00000016
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x482 = 0xfff9fffe0401e172
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x483 =  0x1ffffff00036dff
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x484 =    0x3ffff000011ff
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x485 =         0x7004c1e7
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x486 =         0x80000021
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x487 =         0xffffffff
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x488 =             0x2000
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x489 =           0x3727ff
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x48a =               0x2e
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x48b =   0x1fbcff00000000
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x48c =      0xf0106334141
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x48d =       0x7f00000016
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x48e = 0xfff9fffe04006172
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x48f =  0x1ffffff00036dfb
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x490 =    0x3ffff000011fb
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x491 =                0x1
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR 0xc0010114 =                  0
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR       0xce =    0x40439f1011400
+2020-02-03T18:44:30.550Z| vmx| I125: Common: MSR      0x10a =                  0
+2020-02-03T18:44:30.551Z| vmx| I125: UTIL: Change file descriptor limit from soft 1024,hard 1048576 to soft 16384,hard 1048576.
+2020-02-03T18:44:30.551Z| vmx| I125: VMMon_GetkHzEstimate: Calculated 1991998 kHz
+2020-02-03T18:44:30.551Z| vmx| I125: TSC kHz estimates: vmmon 1991998, cpuinfo 2000045, cpufreq 2000000.  Using 1991998 kHz
+2020-02-03T18:44:30.551Z| vmx| I125: TSC first measured delta 198
+2020-02-03T18:44:30.551Z| vmx| I125: TSC min delta 62
+2020-02-03T18:44:30.551Z| vmx| I125: PTSC: RefClockToPTSC 0 @ 1000000Hz -> 0 @ 1991998000Hz
+2020-02-03T18:44:30.551Z| vmx| I125: PTSC: RefClockToPTSC ((x * 4177522590) >> 21) + -7122664625705
+2020-02-03T18:44:30.551Z| vmx| I125: PTSC: tscOffset -7173065522725
+2020-02-03T18:44:30.551Z| vmx| I125: PTSC: using TSC
+2020-02-03T18:44:30.551Z| vmx| I125: PTSC: hardware TSCs are synchronized.
+2020-02-03T18:44:30.551Z| vmx| I125: PTSC: current PTSC=69862
+2020-02-03T18:44:30.551Z| vmx| I125: WQPoolAllocPoll : pollIx = 3, signalHandle = 17
+2020-02-03T18:44:30.551Z| vmx| I125: MKSXlib: Initialized thread-safe Xlib
+2020-02-03T18:44:30.552Z| vmx| I125: [0x5571087FE000-0x557109530F02): /usr/lib/vmware/bin/vmware-vmx
+2020-02-03T18:44:30.584Z| vmx| I125: ConfigCheck: No rules file found. Checks are disabled.
+2020-02-03T18:44:30.585Z| vmx| I125: changing directory to /home/cthacker/Desktop/ct-devops/docker/craig-dev-env/vagrant/.vagrant/machines/default/vmware_desktop/969ecf56-8683-4f9e-b495-19189bd1789f/.
+2020-02-03T18:44:30.585Z| vmx| I125: Config file: /home/cthacker/Desktop/ct-devops/docker/craig-dev-env/vagrant/.vagrant/machines/default/vmware_desktop/969ecf56-8683-4f9e-b495-19189bd1789f/ubuntu-18.04-amd64.vmx
+2020-02-03T18:44:30.585Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=1, newAppState=1873, success=1 additionalError=0
+2020-02-03T18:44:30.585Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=2, newAppState=1878, success=1 additionalError=0
+2020-02-03T18:44:30.620Z| vmx| A100: ConfigDB: Setting RemoteDisplay.vnc.key = <not printed>
+2020-02-03T18:44:30.646Z| vmx| A100: ConfigDB: Unsetting "inVMTeam"
+2020-02-03T18:44:30.649Z| vmx| A100: ConfigDB: Setting RemoteDisplay.vnc.key = <not printed>
+2020-02-03T18:44:30.672Z| vmx| I125: VMXVmdbCbVmVmxExecState: Exec state change requested to state poweredOn without reset, default, softOptionTimeout: 0.
+2020-02-03T18:44:30.672Z| vmx| I125: Tools: sending 'OS_PowerOn' (state = 3) state change request
+2020-02-03T18:44:30.673Z| vmx| I125: Tools: Delaying state change request to state 3.
+2020-02-03T18:44:30.673Z| vmx| W115: PowerOn
+2020-02-03T18:44:30.673Z| vmx| I125: VMX_PowerOn: VMX build 15018445, UI build 15018445
+2020-02-03T18:44:30.674Z| vmx| I125: libnuma.so found and in use.
+2020-02-03T18:44:30.679Z| vmx| I125: NUMA topology found.
+2020-02-03T18:44:30.680Z| vmx| I125: NUMA node 0: 7836MB, cpus 0x0000000f 0x00000000 0x00000000 0x00000000
+2020-02-03T18:44:30.682Z| vmx| A100: ConfigDB: Setting RemoteDisplay.vnc.key = <not printed>
+2020-02-03T18:44:30.692Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=0, newAppState=1871, success=1 additionalError=0
+2020-02-03T18:44:30.692Z| vmx| I125: HOST sysname Linux, nodename craig-laptop, release 5.3.0-29-generic, version #31-Ubuntu SMP Fri Jan 17 17:27:26 UTC 2020, machine x86_64
+2020-02-03T18:44:30.692Z| vmx| I125: DICT --- GLOBAL SETTINGS /usr/lib/vmware/settings
+2020-02-03T18:44:30.692Z| vmx| I125: DICT --- NON PERSISTENT (null)
+2020-02-03T18:44:30.692Z| vmx| I125: DICT --- USER PREFERENCES /home/cthacker/.vmware/preferences
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.dataCollectionEnabled.epoch = "9243750739"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.dataCollectionEnabled = "FALSE"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT   pref.lastUpdateCheckSec = "1580676320"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.keyboardAndMouse.vmHotKey.enabled = "FALSE"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.keyboardAndMouse.vmHotKey.count = "0"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT vmWizard.isoLocationMRU.count = "2"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT vmWizard.isoLocationMRU0.location = "/home/cthacker/Downloads/kubuntu-18.04.3-desktop-amd64.iso"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT         vmWizard.guestKey = "ubuntu-64"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT vmWizard.installMediaType = "later"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT             hints.hideAll = "FALSE"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.ws.session.window.count = "1"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.ws.session.window0.tab.count = "3"
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.ws.session.window0.tab0.dest = ""
+2020-02-03T18:44:30.692Z| vmx| I125: DICT pref.ws.session.window0.tab0.file = "home"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab0.type = "home"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab0.cnxType = "vmdb"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab0.focused = "FALSE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.sidebar = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.sidebar.width = "209"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.statusBar = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tabs = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.thumbnailBar = "FALSE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.thumbnailBar.size = "125"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.thumbnailBar.view = "same-folder"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.placement.left = "0"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.placement.top = "36"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.placement.right = "1920"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.placement.bottom = "1054"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.maximized = "FALSE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window1.tab0.cnxType = "vmdb"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window1.tab1.cnxType = "vmdb"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT hint.mainMem.backing.noSwap = "FALSE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT hint.ui.wizard.vm.showSuccessPage = "FALSE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window1.tab2.cnxType = "vim"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab1.dest = ""
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab1.file = "/home/cthacker/vmware/GLAWEB01/GLAWEB01.vmx"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab1.type = "vm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab1.cnxType = "vmdb"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab1.focused = "FALSE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab2.cnxType = "vmdb"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT vmWizard.isoLocationMRU1.location = "/home/cthacker/Downloads/lubuntu-18.04-desktop-amd64.iso"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab2.dest = ""
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab2.file = "folder:localhost"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab2.type = "folder"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab2.focused = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT pref.ws.session.window0.tab3.cnxType = "vmdb"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- USER DEFAULTS /home/cthacker/.vmware/config
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- HOST DEFAULTS /etc/vmware/config
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                    libdir = "/usr/lib/vmware"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                    bindir = "/usr/bin"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             initscriptdir = "/etc/init.d"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT           gksu.rootMethod = "sudo"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                NETWORKING = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT            VMBLOCK_CONFED = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT               VMCI_CONFED = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT              VSOCK_CONFED = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT            authd.fullpath = "/usr/sbin/vmware-authd"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT       product.buildNumber = "15018445"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT    player.product.version = "15.5.1"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT        vix.config.version = "1"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             telemetryUUID = "5db18e4e-4489-11ea-99b7-5d05bdfe4199"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.autoSoftwareUpdateEnabled.epoch = "9746302212"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.dataCollectionEnabled.epoch = "9243750739"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.componentDownloadEnabled = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.transferVersion = "1"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT         authd.client.port = "902"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT           authd.proxy.nfc = "vmware-hostd:ha-nfc"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT           vmware.fullpath = "/usr/bin/vmware"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                vix.libdir = "/usr/lib/vmware-vix"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT           product.version = "15.5.1"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT workstation.product.version = "15.5.1"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT              product.name = "VMware Workstation"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                acceptEULA = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             acceptOVFEULA = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.autoSoftwareUpdateEnabled = "no"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.dataCollectionEnabled = "no"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT installerDefaults.dataCollectionEnabled.initialized = "yes"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- SITE DEFAULTS /usr/lib/vmware/config
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                  tag.help = "introduction.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT   tag.configurationEditor = "config_editor_newvm.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             tag.ideConfig = "devices_virtualdrive.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT          tag.floppyConfig = "devices_floppy.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT           tag.mouseConfig = "devices_mouse.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             tag.netConfig = "devices_netadapter.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT        tag.parallelConfig = "devices_parallel.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT          tag.serialConfig = "devices_serial.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT           tag.soundConfig = "devices_sound.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             tag.memConfig = "configvm_memory.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT            tag.miscConfig = "configvm.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             tag.usbConfig = "devices_usb.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT         tag.displayConfig = "configvm_display-problems.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT                 tag.tools = "vmtools.htm"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- NONPERSISTENT
+2020-02-03T18:44:30.693Z| vmx| I125: DICT  vmx.noUIBuildNumberCheck = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             gui.available = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- COMMAND LINE
+2020-02-03T18:44:30.693Z| vmx| I125: DICT  vmx.noUIBuildNumberCheck = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             gui.available = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- RECORDING
+2020-02-03T18:44:30.693Z| vmx| I125: DICT  vmx.noUIBuildNumberCheck = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             gui.available = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT --- CONFIGURATION /home/cthacker/Desktop/ct-devops/docker/craig-dev-env/vagrant/.vagrant/machines/default/vmware_desktop/969ecf56-8683-4f9e-b495-19189bd1789f/ubuntu-18.04-amd64.vmx 
+2020-02-03T18:44:30.693Z| vmx| I125: DICT            bios.bootorder = "hdd,cdrom"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT        checkpoint.vmstate = ""
+2020-02-03T18:44:30.693Z| vmx| I125: DICT             cleanshutdown = "TRUE"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT            config.version = "8"
+2020-02-03T18:44:30.693Z| vmx| I125: DICT      cpuid.corespersocket = "1"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT               displayname = "vagrant: default"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        ehci.pcislotnumber = "-1"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT              ehci.present = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     ethernet0.addresstype = "generated"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  ethernet0.connectiontype = "nat"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT         ethernet0.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      ethernet0.virtualdev = "e1000"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        extendedconfigfile = "ubuntu-18.04-amd64.vmxf"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT            filesearchpath = ".;/home/cthacker/.vagrant.d/boxes/bento-VAGRANTSLASH-ubuntu-18.04/201912.04.0/vmware_desktop"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT           floppy0.present = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT                   guestos = "ubuntu-64"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT   gui.fullscreenatpoweron = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     gui.viewmodeatpoweron = "windowed"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        hgfs.linkrootshare = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT         hgfs.maprootshare = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT       ide0:0.clientdevice = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT         ide0:0.devicetype = "cdrom-raw"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT           ide0:0.filename = "auto detect"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT            ide0:0.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT isolation.tools.hgfs.disable = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT                   memsize = "1024"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT    monitor.phys_bits_used = "40"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT            msg.autoanswer = "true"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      numa.autosize.cookie = "10001"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT numa.autosize.vcpu.maxpervirtualnode = "1"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT                  numvcpus = "1"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT             nvme0.present = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT                     nvram = "ubuntu-18.04-amd64.nvram"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      parallel0.autodetect = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT   parallel0.bidirectional = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        parallel0.filename = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT         parallel0.present = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  parallel0.startconnected = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  pcibridge0.pcislotnumber = "17"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        pcibridge0.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      pcibridge4.functions = "8"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  pcibridge4.pcislotnumber = "21"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        pcibridge4.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     pcibridge4.virtualdev = "pcieRootPort"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      pcibridge5.functions = "8"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  pcibridge5.pcislotnumber = "22"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        pcibridge5.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     pcibridge5.virtualdev = "pcieRootPort"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      pcibridge6.functions = "8"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  pcibridge6.pcislotnumber = "23"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        pcibridge6.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     pcibridge6.virtualdev = "pcieRootPort"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      pcibridge7.functions = "8"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT  pcibridge7.pcislotnumber = "24"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        pcibridge7.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     pcibridge7.virtualdev = "pcieRootPort"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          policy.vm.mvmtid = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        powertype.poweroff = "soft"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT         powertype.poweron = "soft"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT           powertype.reset = "soft"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT         powertype.suspend = "soft"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT   proxyapps.publishtohost = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT remotedisplay.vnc.enabled = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT      remotedisplay.vnc.ip = "127.0.0.1"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     remotedisplay.vnc.key = <not printed>
+2020-02-03T18:44:30.694Z| vmx| I125: DICT remotedisplay.vnc.password = "dRDclmvB"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT    remotedisplay.vnc.port = "5923"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT           replay.filename = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          replay.supported = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT             sata0.present = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT       scsi0.pcislotnumber = "16"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT             scsi0.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          scsi0.virtualdev = "lsilogic"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          scsi0:0.filename = "disk-cl1.vmdk"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT           scsi0:0.present = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT              scsi0:0.redo = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT        serial0.autodetect = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          serial0.filename = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          serial0.filetype = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT     serial0.pipe.endpoint = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT           serial0.present = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT    serial0.startconnected = "FALSE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT       serial0.trynorxloss = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT    serial0.yieldonmsrread = ""
+2020-02-03T18:44:30.694Z| vmx| I125: DICT       sharedfolder.maxnum = "0"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT              softpoweroff = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT          sound.autodetect = "TRUE"
+2020-02-03T18:44:30.694Z| vmx| I125: DICT            sound.filename = "-1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             sound.present = "FALSE"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT      sound.startconnected = "FALSE"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             svga.vramsize = "134217728"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT            tools.synctime = "TRUE"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT      tools.upgrade.policy = "upgradeAtPowerCycle"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT         usb.pcislotnumber = "-1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT               usb.present = "FALSE"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT               uuid.action = "create"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                 uuid.bios = ""
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             uuid.location = ""
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                   vc.uuid = ""
+2020-02-03T18:44:30.695Z| vmx| I125: DICT virtualhw.productcompatibility = "hosted"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT         virtualhw.version = "9"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                  vmci0.id = "1861462627"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT       vmci0.pcislotnumber = "35"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             vmci0.present = "TRUE"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT  vmotion.checkpointfbsize = "134217728"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT --- USER DEFAULTS ~/.vmware/config 
+2020-02-03T18:44:30.695Z| vmx| I125: DICT --- HOST DEFAULTS /etc/vmware/config 
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                    libdir = "/usr/lib/vmware"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                    bindir = "/usr/bin"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             initscriptdir = "/etc/init.d"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT           gksu.rootMethod = "sudo"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                NETWORKING = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT            VMBLOCK_CONFED = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT               VMCI_CONFED = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT              VSOCK_CONFED = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT            authd.fullpath = "/usr/sbin/vmware-authd"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT       product.buildNumber = "15018445"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT    player.product.version = "15.5.1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT        vix.config.version = "1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             telemetryUUID = "5db18e4e-4489-11ea-99b7-5d05bdfe4199"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.autoSoftwareUpdateEnabled.epoch = "9746302212"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.dataCollectionEnabled.epoch = "9243750739"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.componentDownloadEnabled = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.transferVersion = "1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT         authd.client.port = "902"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT           authd.proxy.nfc = "vmware-hostd:ha-nfc"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT           vmware.fullpath = "/usr/bin/vmware"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                vix.libdir = "/usr/lib/vmware-vix"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT           product.version = "15.5.1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT workstation.product.version = "15.5.1"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT              product.name = "VMware Workstation"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                acceptEULA = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             acceptOVFEULA = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.autoSoftwareUpdateEnabled = "no"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.dataCollectionEnabled = "no"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT installerDefaults.dataCollectionEnabled.initialized = "yes"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT --- SITE DEFAULTS /usr/lib/vmware/config 
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                  tag.help = "introduction.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT   tag.configurationEditor = "config_editor_newvm.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             tag.ideConfig = "devices_virtualdrive.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT          tag.floppyConfig = "devices_floppy.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT           tag.mouseConfig = "devices_mouse.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             tag.netConfig = "devices_netadapter.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT        tag.parallelConfig = "devices_parallel.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT          tag.serialConfig = "devices_serial.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT           tag.soundConfig = "devices_sound.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             tag.memConfig = "configvm_memory.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT            tag.miscConfig = "configvm.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT             tag.usbConfig = "devices_usb.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT         tag.displayConfig = "configvm_display-problems.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT                 tag.tools = "vmtools.htm"
+2020-02-03T18:44:30.695Z| vmx| I125: DICT --- GLOBAL SETTINGS /usr/lib/vmware/settings 
+2020-02-03T18:44:30.696Z| vmx| I125: ToolsISO: open of /usr/lib/vmware/isoimages/isoimages_manifest.txt.sig failed: Could not find the file
+2020-02-03T18:44:30.696Z| vmx| I125: ToolsISO: Unable to read signature file '/usr/lib/vmware/isoimages/isoimages_manifest.txt.sig', ignoring.
+2020-02-03T18:44:30.697Z| vmx| I125: ToolsISO: Updated cached value for imageName to 'linux.iso'.
+2020-02-03T18:44:30.697Z| vmx| I125: ToolsISO: Selected Tools ISO 'linux.iso' for 'ubuntu-64' guest.
+2020-02-03T18:44:30.697Z| vmx| I125: Vix: [mainDispatch.c:4215]: VMAutomation_ReportPowerOpFinished: statevar=1, newAppState=1873, success=1 additionalError=0
