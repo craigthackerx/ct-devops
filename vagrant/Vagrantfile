@@ -12,29 +12,76 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "~/vagrant-stuff", "/vagrant_stuff"
 
   config.vm.provision "shell", inline: <<-SHELL
+      
+      #Add User for myself
       useradd -m -s /bin/bash cthacker
       usermod -aG sudo cthacker
       echo cthacker:Sp00kyP4SS! | chpasswd
+      
+      #Install packages
       export DEBIAN_FRONTEND=noninteractive && \
       add-apt-repository universe && \
       add-apt-repository multiverse && \
       apt-get update -y && apt-get install -qqy \
+      apt-transport-https \
       bleachbit \
+      ca-certificates \
       chromium-browser \
       curl \
       dos2unix \
+      dnsdiag \
+      git \
+      gnupg-agent \
+      htop \
       ifupdown \
       nano \
+      neofetch \ 
+      openjdk-8-jdk \
       open-vm-tools \
       open-vm-tools-desktop \
       openssh-server \
       openssl \
+      putty \
+      putty-tools \
       resolvconf \
+      software-properties-common \
+      terminator \ 
       tmux \
       wget \
+      whois \
       xfce4  && \
+      apt dist-upgrade -qqy
+      
+      #Configure ssh
       sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
       sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config    
-      service ssh restart
+      systemctl enable ssh
+      systemctl restart ssh
+
+      #Install VSCodium
+      wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | apt-key add -
+      apt-add-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'
+      apt-get update
+      apt-get install codium
+
+      #Install Docker
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+      sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+      apt-get update
+      apt-get install -qqy docker-ce docker-ce-cli docker-compose containerd.io 
+      curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+      systemctl enable docker
+      systemctl restart docker
+      usermod -aG docker cthacker
+
+      #Install acme.sh
+      curl https://get.acme.sh | bash
+      
+      #Install NVM
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
+      #Install SDKMAN!
+      curl -s "https://get.sdkman.io" | bash
+      source "$HOME/.sdkman/bin/sdkman-init.sh"
    SHELL
 end
