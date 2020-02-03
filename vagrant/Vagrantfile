@@ -1,0 +1,40 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu1804"
+  config.vm.hostname = "cthacker-vm"
+  
+  config.vm.provider "vmware-workstation" do |v|
+   v.gui = true
+   v.memory = "4096"
+ end
+
+  config.vm.synced_folder "~/vagrant-stuff", "/vagrant_stuff"
+
+  config.vm.provision "shell", inline: <<-SHELL
+      useradd -m -s /bin/bash cthacker
+      usermod -aG sudo cthacker
+      echo cthacker:Sp00kyP4SS! | chpasswd
+      export DEBIAN_FRONTEND=noninteractive && \
+      add-apt-repository universe && \
+      add-apt-repository multiverse && \
+      apt-get update -y && apt-get install -qqy \
+      bleachbit \
+      chromium-browser \
+      curl \
+      dos2unix \
+      ifupdown \
+      nano \
+      open-vm-tools \
+      open-vm-tools-desktop \
+      openssh-server \
+      openssl \
+      resolvconf \
+      tmux \
+      wget \
+      xfce4  && \
+      sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
+      sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config    
+      service ssh restart
+   SHELL
+end

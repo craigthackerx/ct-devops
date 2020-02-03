@@ -1,5 +1,0 @@
-.encoding = "UTF-8"
-cloneOf0 = "/home/cthacker/.vagrant.d/boxes/bento-VAGRANTSLASH-ubuntu-18.04/201912.04.0/vmware_desktop/ubuntu-18.04-amd64.vmx"
-numCloneOf = "1"
-sentinel0 = "disk-cl1.vmdk"
-numSentinels = "1"
