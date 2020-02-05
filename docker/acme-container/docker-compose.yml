@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  acme-container:
+    build: ./acme-container
+    image: "craigtho/ubuntu:latest"
+    container_name: acme-container
+    restart: unless-stopped
+    stdin_open: true
+    tty:  true
+    privileged: true
+    ports:
+      - "1222:22/tcp"
+      - "80:8080/tcp"
+    volumes:
+      - type: volume
+        source: acme-data
+        target: /home/cthacker
+
+      - type: bind
+        source: ./i-am-exposed
+        target: /home
+volumes:
+  acme-data:
