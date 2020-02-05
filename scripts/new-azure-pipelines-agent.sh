@@ -1,7 +1,7 @@
 #!/bin/bash
 AZURE_LINK="https://vstsagentpackage.azureedge.net/agent/2.164.6/vsts-agent-linux-x64-2.164.6.tar.gz"
 
-read -p 'Please enter your desired Agent Name...: ' AGENT_NAME && \
+read -p 'Please enter your desired Agent Name: ' AGENT_NAME && \
 echo "Downloading Azure Agents Package..." && \
 cd $HOME && wget ${AZURE_LINK} && \
 echo "Download Complete" && \
