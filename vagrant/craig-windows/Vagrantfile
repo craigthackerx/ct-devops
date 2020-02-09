@@ -36,7 +36,6 @@ Vagrant.configure(2) do |config|
     choco install firefox -y vag
     choco install googlechrome -y
     choco install openjdk8  -y
-    choco install mls-software-openssh -y
     choco install tomcat  -y
     Set-ExecutionPolicy Bypass -Scope Process -Force; iwr -useb get.scoop.sh | iex
     scoop install vim
