@@ -1,0 +1,93 @@
+#!/bin/bash
+set -e
+[ `whoami` = root ] || { sudo "$0" "$@"; exit $?; }
+
+export DEBIAN_FRONTEND=noninteractive && \
+apt-get update -y && apt-get dist-upgrade -y && apt-get install -y \
+apt-transport-https \
+bleachbit \
+build-essential \
+ca-certificates \
+chromium-browser \
+curl \
+dnsdiag \
+dos2unix \
+git \
+gnupg-agent \
+gufw \
+htop \
+ifupdown \
+keepassxc \
+libcharon-extra-plugins \
+libstrongswan-extra-plugins && \
+
+apt-get install -y \
+neofetch \
+net-tools \
+openjdk-8-jdk \
+openssh-server \
+openssl \
+make \
+gcc \
+cmake \
+putty \
+putty-tools && \
+
+apt-get install -y \
+realmd \
+remmina \
+software-properties-common \
+strongswan \
+terminator \
+tigervnc-common \
+tigervnc-standalone-server \
+tigervnc-viewer \
+tmux \
+unzip \
+wget \
+whois \
+zip && \
+
+#Install Linux Headers
+apt-get install linux-headers-$(uname -r) && \
+
+#Install NetworkManager Tools
+apt-get install network-manager-l2tp-gnome network-manager-openconnect network-manager-openconnect-gnome nmap openconnect && \
+
+#Install Kvantium
+add-apt-repository ppa:papirus/papirus -y && apt-get update -y && \
+apt-get install adapta-kde -y && \
+
+#Install Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" && apt-get update -y && \
+apt-get install docker-ce docker-compose docker-ce-cli containerd.io -y && usermod -aG docker cthacker && \
+systemctl enable docker && \
+systemctl restart docker && \
+
+#Install Lazydocker
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash && \
+
+#Install VSCodium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | apt-key add - && \
+apt-add-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs vscodium main' && \
+apt-get update -y && apt-get install codium -y && \
+
+#Add Environment Variables
+echo 'export NODE_OPTIONS=--max_old_space_size=4096' >> /home/cthacker/.bashrc && \
+echo 'export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"' >> /home/cthacker/.bashrc && \
+
+#Install acme.sh
+curl https://get.acme.sh | bash && \
+chown cthacker:cthacker .acme.sh/ && \
+
+#Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash && \
+
+#Install SDKMAN!
+curl -s "https://get.sdkman.io" | bash && \
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#Install SystemBack
+cd $HOME/Downloads && wget https://vorboss.dl.sourceforge.net/project/systemback/1.8/Systemback_Install_Pack_v1.8.402.tar.xz && tar -xvf Systemback*.tar.xz && rm Systemback*.tar.xz && cd Systemback_Install_Pack_v1.8.402/ && echo "4" | sh install.sh && cd $HOME/Downloads && rm -rf Systemback*
