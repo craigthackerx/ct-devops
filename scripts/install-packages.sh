@@ -15,6 +15,7 @@ dnsdiag \
 dos2unix \
 git \
 gnupg-agent \
+gparted \
 gufw \
 htop \
 ifupdown \
@@ -47,6 +48,7 @@ tigervnc-standalone-server \
 tigervnc-viewer \
 tmux \
 unzip \
+vlc \
 wget \
 whois \
 zip && \
