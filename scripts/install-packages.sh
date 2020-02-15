@@ -2,6 +2,7 @@
 set -e
 [ `whoami` = root ] || { sudo "$0" "$@"; exit $?; }
 
+#Install stuff - Part 1 of 3
 export DEBIAN_FRONTEND=noninteractive && \
 apt-get update -y && apt-get dist-upgrade -y && apt-get install -y \
 apt-transport-https \
@@ -21,6 +22,7 @@ keepassxc \
 libcharon-extra-plugins \
 libstrongswan-extra-plugins && \
 
+#Install stuff - Part 2 of 3
 apt-get install -y \
 neofetch \
 net-tools \
@@ -33,6 +35,7 @@ cmake \
 putty \
 putty-tools && \
 
+#Install stuff - Part 3 of 3
 apt-get install -y \
 realmd \
 remmina \
