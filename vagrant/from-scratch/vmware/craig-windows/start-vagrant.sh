@@ -1,2 +1,2 @@
 #!/bin/bash
-vagrant up --provider vmware_desktop
+vagrant up --provider vmware_workstation
