@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
     vm.gui = true
   end
 
-  config.vm.provision "shell", inline: <<-SHELL1
+  config.vm.provision "shell", inline: <<-SHELL
     Set-ExecutionPolicy Bypass -Scope Process -Force; iwr -useb get.scoop.sh | iex
     scoop bucket add extras
     scoop bucket add java
@@ -35,13 +35,30 @@ Vagrant.configure(2) do |config|
     scoop install xmlstarlet
     scoop install curl
     scoop install which
-  SHELL1
+    scoop install git
+    scoop install unrar
 
+    reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /d 0 /t REG_DWORD /f /reg:64
 
-  config.vm.provision "shell", inline: <<-SHELL2
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability" -Name ShutdownReasonOn -Value 0
+
+    secedit /export /cfg c:\secpol.cfg
+    (gc C:\secpol.cfg).replace("PasswordComplexity = 1", "PasswordComplexity = 0") | Out-File C:\secpol.cfg
+    secedit /configure /db c:\windows\security\local.sdb /cfg c:\secpol.cfg /areas SECURITYPOLICY
+    rm -force c:\secpol.cfg -confirm:$false
+
+    winrm quickconfig -q
+    winrm set winrm/config/winrs @{MaxMemoryPerShellMB="512"}
+    winrm set winrm/config @{MaxTimeoutms="1800000"}
+    winrm set winrm/config/service @{AllowUnencrypted="true"}
+    winrm set winrm/config/service/auth @{Basic="true"}
+    sc config WinRM start= auto
+
+    netsh firewall add portopening TCP 5985 "Port 5985"
+    winrm set winrm/config/listener?Address=*+Transport=HTTP @{Port="5985"}
+
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     choco install firefox -y
     choco install openjdk8  -y
-  SHELL2
-
+   SHELL
 end
