@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  config.vm.box = "craigthacker95/windows10-1909-base"
+  config.vm.communicator = "winrm"
+  config.winrm.username = "vagrant"
+  config.winrm.password = "vagrant"
+  config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct:true
+  config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "rdp", auto_correct:true
+
+  config.vm.provider :vmware_workstation do |vm|
+    vm.gui = true
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+     scoop update
+  SHELL
+end
