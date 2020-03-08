@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+    config.vm.box = "craigthacker95/kubuntu-18.04"
+    config.vm.hostname = "vagrant"
+    config.vm.synced_folder "~/vagrant-stuff", "/vagrant_stuff"
+    config.vm.network :public_network, :bridge => "wlp6s0"
+    config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    SHELL
+  end

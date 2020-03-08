@@ -12,3 +12,7 @@ RUN Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls
 
 #Install Scoop
 RUN Set-ExecutionPolicy Bypass -Scope Process -Force; iwr -useb get.scoop.sh | iex
+
+RUN choco install openjdk8
+
+ENTRYPOINT [ "powershell" ]
