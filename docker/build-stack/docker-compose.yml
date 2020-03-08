@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+
+craigtho-portainer:
+    container_name: craigtho-portainer
+    restart: unless-stopped
+    image: craigtho/portainer
+    ports:
+      - "4222:22/tcp"
+      - "9443:9000/tcp"
+      - "10000:8000/tcp"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+volumes:
+  tomcat-8080-data:
+  db-data:
+  portainer_data:

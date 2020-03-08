@@ -1,0 +1,31 @@
+version: '2.4'
+services:
+
+ craigtho-portainer:
+    container_name: craigtho-portainer
+    restart: unless-stopped
+    image: craigtho/windows-portainer
+    mem_limit: 1024m
+    cpu_count: 1
+    ports:
+      - "4222:22/tcp"
+      - "9443:9000/tcp"
+      - "10000:8000/tcp"
+    volumes:
+      - source: \\.\pipe\docker_engine
+        target: \\.\pipe\docker_engine
+        type: npipe
+
+      - C:\ProgramData\Portainer:C:\data
+
+ electron-build-server:
+    container_name: craigtho-electron-build-server
+    image: craigtho/electron-build-server
+    mem_limit: 8096m
+    cpu_count: 8
+    stdin_open: true
+    ports:
+      - "2222:22/tcp"
+
+volumes:
+    portainer_data:
