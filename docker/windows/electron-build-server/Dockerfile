@@ -18,6 +18,7 @@ RUN Get-Service -Name ssh-agent -StartupType Automatic ; Get-Service -Name sshd 
 #Install Electron Packages - Scoop
 RUN scoop install gradle@4.8.1
 RUN scoop install python
+RUN scoop install android-sdk
 RUN scoop install googlechrome
 RUN scoop install chromium
 
