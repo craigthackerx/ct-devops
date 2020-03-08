@@ -1,6 +1,10 @@
 {
-    "hosts": [
+  "registry-mirrors": [],
+  "insecure-registries": [],
+  "debug": true,
+  "experimental": false,
+  "hosts": [
       "tcp://0.0.0.0:2375",
       "npipe://"
-    ]
-  }
+    ],
+}
