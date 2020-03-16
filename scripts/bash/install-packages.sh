@@ -54,10 +54,10 @@ whois \
 zip && \
 
 #Install Linux Headers
-apt-get install linux-headers-$(uname -r) && \
+apt-get install linux-headers-$(uname -r) -y && \
 
 #Install NetworkManager Tools
-apt-get install network-manager-l2tp-gnome network-manager-openconnect network-manager-openconnect-gnome nmap openconnect && \
+apt-get install network-manager-l2tp-gnome network-manager-openconnect network-manager-openconnect-gnome nmap openconnect -y && \
 
 #Install Kvantium
 add-apt-repository ppa:papirus/papirus -y && apt-get update -y && \
