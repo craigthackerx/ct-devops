@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+
+  electron-build-servercore:
+    container_name: electron-build-servercore
+    build: ./build-server
+    mem_limit: 8192m
+    cpu_count: 8
+    stdin_open: true
+    ports:
+      - "1222:22/tcp"
