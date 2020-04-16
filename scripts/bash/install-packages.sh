@@ -95,4 +95,8 @@ curl -s "https://get.sdkman.io" | bash && \
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #Install SystemBack
-cd $HOME/Downloads && wget https://vorboss.dl.sourceforge.net/project/systemback/1.8/Systemback_Install_Pack_v1.8.402.tar.xz && tar -xvf Systemback*.tar.xz && rm Systemback*.tar.xz && cd Systemback_Install_Pack_v1.8.402/ && echo "4" | sh install.sh && cd $HOME/Downloads && rm -rf Systemback*
+cd $HOME/Downloads && wget https://vorboss.dl.sourceforge.net/project/systemback/1.8/Systemback_Install_Pack_v1.8.402.tar.xz && tar -xvf Systemback*.tar.xz && rm Systemback*.tar.xz && cd Systemback_Install_Pack_v1.8.402/ && echo "4" | sh install.sh && cd $HOME/Downloads && rm -rf Systemback* && \
+
+wget https://az764295.vo.msecnd.net/stable/a9f8623ec050e5f0b44cc8ce8204a1455884749f/code_1.44.1-1586789296_amd64.deb && \
+dpkg -i code*.deb && \
+rm -rf code*.deb
