@@ -98,7 +98,7 @@ cd $HOME/Downloads && wget https://vorboss.dl.sourceforge.net/project/systemback
 #Install VSCODE
 wget https://az764295.vo.msecnd.net/stable/a9f8623ec050e5f0b44cc8ce8204a1455884749f/code_1.44.1-1586789296_amd64.deb && \
 dpkg -i code*.deb && \
-rm -rf code*.deb
+rm -rf code*.deb && \
 
 #Install KVM
 apt-get update && apt-get install -y \
@@ -107,7 +107,7 @@ libvirt-bin \
 bridge-utils \
 virt-manager \
 qemu \
-virt-viewer \ 
+virt-viewer \
 spice-vdagent \
 open-vm-tools \
 open-vm-tools-desktop
