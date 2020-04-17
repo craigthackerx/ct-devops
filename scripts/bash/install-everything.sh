@@ -72,10 +72,10 @@ systemctl restart docker && \
 #Install Lazydocker
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash && \
 
-#Install VSCodium
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | apt-key add - && \
-apt-add-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs vscodium main' && \
-apt-get update -y && apt-get install codium -y && \
+# #Install VSCodium - Cert not valid 17/04/2020
+# wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | apt-key add - && \
+# apt-add-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs vscodium main' && \
+# apt-get update -y && apt-get install codium -y && \
 
 #Add Environment Variables
 echo 'export NODE_OPTIONS=--max_old_space_size=4096' >> /home/cthacker/.bashrc && \
@@ -111,3 +111,6 @@ virt-viewer \
 spice-vdagent \
 open-vm-tools \
 open-vm-tools-desktop
+
+#Final update, upgrade and clean
+apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get autoclean -y && apt-get clean -y
