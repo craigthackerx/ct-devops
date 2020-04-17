@@ -16,3 +16,12 @@ tigervnc-standalone-server \
 tigervnc-viewer \
 tigervnc-common \
 tigervnc-xorg-extension
+
+touch  ~/.vnc/xstartup && \
+echo "#!/bin/sh" > ~/.vnc/xstartup && \
+echo "[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup" >> ~/.vnc/xstartup && \
+echo "[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources" >> ~/.vnc/xstartup && \
+echo "vncconfig -iconic & >> ~/.vnc/xstartup" >> ~/.vnc/xstartup && \
+echo "dbus-launch --exit-with-session gnome-session" & >> ~/.vnc/xstartup && \
+chmod 700 ~/.vnc/xstartup && \
+vncserver -localhost no -geometry 800x600 -depth 24
