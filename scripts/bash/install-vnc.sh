@@ -17,7 +17,7 @@ tigervnc-viewer \
 tigervnc-common \
 tigervnc-xorg-extension && \
 
-mkdir -p ~/.vnc && \
+mkdir  ~/.vnc && \
 touch  ~/.vnc/xstartup && \
 echo '#!/bin/sh' > ~/.vnc/xstartup && \
 echo '[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup' >> ~/.vnc/xstartup && \
