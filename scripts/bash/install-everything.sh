@@ -44,9 +44,7 @@ socat \
 software-properties-common \
 strongswan \
 terminator \
-tigervnc-common \
-tigervnc-standalone-server \
-tigervnc-viewer \
+tightvncserver \
 tmux \
 unzip \
 vlc \
@@ -118,4 +116,9 @@ open-vm-tools-desktop
 #Setup VNC
 apt-get update && apt-get install -y \
 xfce4 \
-xfce4-goodies
+xfce4-goodies && \
+
+touch  ~/.vnc/xstartup && \
+echo "#!/bin/bash" > ~/.vnc/xstartup && \
+echo "xrdb $HOME/.Xresources" >> ~/.vnc/xstartup && \
+echo "startxfce4 &" >> ~/.vnc/xstartup
