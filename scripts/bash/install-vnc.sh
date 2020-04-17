@@ -15,7 +15,7 @@ apt-get install -y \
 tigervnc-standalone-server \
 tigervnc-viewer \
 tigervnc-common \
-tigervnc-xorg-extension
+tigervnc-xorg-extension && \
 
 touch  ~/.vnc/xstartup && \
 echo "#!/bin/sh" > ~/.vnc/xstartup && \
