@@ -5,7 +5,7 @@ set -e
 apt-get update && apt-get install xserver-xorg-core -y && \
 
 apt-get install -y \
-xserver-xorg-input-all
+xserver-xorg-input-all \
 xorg \
 xserver-xorg \
 xserver-xorg-input-evdev \
