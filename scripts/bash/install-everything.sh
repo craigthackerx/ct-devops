@@ -40,6 +40,7 @@ putty-tools && \
 apt-get install -y \
 realmd \
 remmina \
+socat \
 software-properties-common \
 strongswan \
 terminator \
