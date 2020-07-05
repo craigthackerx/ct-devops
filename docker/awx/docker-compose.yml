@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+
+  awx-server:
+    build: ./awx
+    image: "craigtho/awx-server:latest"
+    container_name: craigtho-awx
+    restart: unless-stopped
+    stdin_open: true
+    tty:  true
+    privileged: true
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "2222:22/tcp"
+      - "8080:80/tcp"
+      - "8443:443/tcp"
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+
+    - type: volume
+      source: awx-data
+      target: /home
+
+volumes:
+  awx-data:
