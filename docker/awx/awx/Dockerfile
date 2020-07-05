@@ -70,6 +70,8 @@ RUN source ~/.bashrc \
     && nvm install 12.18.2 \
     && nvm use 12.18.2
 
+RUN curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && \
 echo "PATH=$PATH:usr/local/bin" >> $HOME/.bashrc && \
@@ -78,10 +80,18 @@ python3 get-pip.py && pip install \
                             packaging \
                             msrest
 
-RUN apt-get install ansible -y && git clone https://github.com/ansible/awx.git && \
+
+RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list && \
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 && \
+apt-get update -y && \
+apt-get install ansible -y
+
+RUN git clone https://github.com/ansible/awx.git && \
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash && \
 cd awx/installer && ansible-playbook -i inventory install.yml
 
+RUN ${CLEAN}
+
 ADD nginx.conf /
 
-ENTRYPOINT [ "service ssh start && nash" ]
+ENTRYPOINT [ "service ssh start && bash" ]
