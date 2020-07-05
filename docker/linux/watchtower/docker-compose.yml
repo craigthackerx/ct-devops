@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+
+ craigtho-portainer:
+    build: ./watchtower-server
+    container_name: craigtho-watchtower
+    restart: unless-stopped
+    image: craigtho/watchtower:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
