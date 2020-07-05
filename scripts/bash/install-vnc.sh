@@ -26,4 +26,5 @@ echo 'vncconfig -iconic &' >> ~/.vnc/xstartup && \
 echo 'dbus-launch --exit-with-session gnome-session &' >> ~/.vnc/xstartup && \
 chmod 777 -R ~/.vnc/xstartup
 
-#vncserver -localhost no -geometry 800x600 -depth 24 && chmod 700 -R ~/.vnc
+#vncserver -localhost no -geometry 1920x1080 -depth 24 && chmod 700 -R ~/.vnc
+#ssh -N -T -L 5901:<server's IP address>:5901 &
